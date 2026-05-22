@@ -1,53 +1,80 @@
-## Ignore Visual Studio temporary files, build results, and user-specific files
-
-# Build Folders
-/bin/
-/obj/
-
-# Visual Studio
-/.vs/
-*.suo
+# Visual Studio / .NET
+.vs/
+.vscode/
+**/bin/
+**/obj/
 *.user
+*.suo
 *.userosscache
 *.sln.docstates
+*.nupkg
+*.snupkg
+*.dotCover
+*.userprefs
+project.lock.json
+**/packages/
+*.pidb
+*.svclog
+*.pdb
+*.mdb
 
-# Rider
+# Rider / JetBrains
 .idea/
+*.sln.iml
 
-# Visual Studio Code workspace settings
-/.vscode/
+# Build results
+*.app
+*.apk
+*.aab
+*.xap
+*.exe
+*.dll
+*.so
+*.dylib
 
 # NuGet
-/packages/
 *.nupkg
-project.lock.json
-project.fragment.lock.json
+# NuGet v3
+.project.lock.json
 
-# Test results
-/TestResults/
-*.trx
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
 
 # Logs
 *.log
 
-# OS files
-.DS_Store
-Thumbs.db
+# Test results
+TestResults/
+coverage*/
+coverage.xml
 
-# Coverage results
-coverage.opencover.xml
-*.coverage
-*.coveragexml
+# Temporary
+*.tmp
+*.temp
+~$*
 
-# Generated files
-*.g.cs
-*.g.i.cs
-*_i.c
-*_i.h
+# VS Code workspace storage
+.history/
 
-# Rider/Resharper
-/.idea/
-*.sln.iml
+# Generated image output
+/output/
 
-# Dotnet user local files
-client-secrets.json
+# Node
+node_modules/
+
+# Misc
+*.class
+*.jar
+
+# Ignore user-specific local secrets or credentials
+.secretstore/
+
+# Ignore files created by dotnet user-secrets
+secrets.json
+
+# Ignore local tool caches
+.terraform/
+
+# End of file
