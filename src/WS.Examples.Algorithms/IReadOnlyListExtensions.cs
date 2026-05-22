@@ -29,7 +29,7 @@ public static class IReadOnlyListExtensions
 
             if (guess == item)    
             {
-                return Option.Some(mid);
+                return Some(mid);
             }
             else if (guess > item)
             {
@@ -41,7 +41,7 @@ public static class IReadOnlyListExtensions
             }
         }
 
-        return Option.None;
+        return None;
     }
 
     /// <summary>

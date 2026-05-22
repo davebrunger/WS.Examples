@@ -7,7 +7,7 @@ This project focuses on small, self-contained examples intended for learning and
 ## Contents
 
 | Chapter | Page | Algorithm | Implementation |
-|--------:|-----:|:---------:|----------------|
+|--------:|-----:|---------|----------------|
 | 1 | 9  | Binary Search   | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)
 | 2 | 38 | Selection Sort  | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)
 | 3 | 44 | Recursion       | [IEnumerableExtensions.cs](IEnumerableExtensions.cs)

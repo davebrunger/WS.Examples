@@ -64,13 +64,13 @@ public static class IEnumerableExtensions
                     var item = contents.AsItem;
                     if (predicate(item))
                     {
-                        return Option.Some(item);
+                        return Some(item);
                     }
                 }
             }
         }
 
-        return Option.None;
+        return None;
     }
 
     /// <summary>
@@ -102,7 +102,7 @@ public static class IEnumerableExtensions
         {
             if (contents.IsContainer)
             {
-                var result = FindRecursively(contents.AsContainer, predicate);
+                var result = contents.AsContainer.FindRecursively(predicate);
                 if (result.IsSome)
                 {
                     return result;
@@ -113,11 +113,11 @@ public static class IEnumerableExtensions
                 var item = contents.AsItem;
                 if (predicate(item))
                 {
-                    return Option.Some(item);
+                    return Some(item);
                 }
             }
         }
-        return Option.None;
+        return None;
     }
 
     /// <summary>
