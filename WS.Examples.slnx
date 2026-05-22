@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/WS.Examples.Algorithms/WS.Examples.Algorithms.csproj" />
+  </Folder>
+</Solution>
