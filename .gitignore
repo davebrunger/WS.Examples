@@ -1,0 +1,53 @@
+## Ignore Visual Studio temporary files, build results, and user-specific files
+
+# Build Folders
+/bin/
+/obj/
+
+# Visual Studio
+/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Visual Studio Code workspace settings
+/.vscode/
+
+# NuGet
+/packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# Test results
+/TestResults/
+*.trx
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage results
+coverage.opencover.xml
+*.coverage
+*.coveragexml
+
+# Generated files
+*.g.cs
+*.g.i.cs
+*_i.c
+*_i.h
+
+# Rider/Resharper
+/.idea/
+*.sln.iml
+
+# Dotnet user local files
+client-secrets.json
