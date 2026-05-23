@@ -6,11 +6,12 @@ This project focuses on small, self-contained examples intended for learning and
 
 ## Contents
 
-| Chapter | Page | Algorithm | Implementation |
-|--------:|-----:|---------|----------------|
-| 1 | 9  | Binary Search   | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)
-| 2 | 38 | Selection Sort  | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)
-| 3 | 44 | Recursion       | [IEnumerableExtensions.cs](IEnumerableExtensions.cs)
+| Chapter | Page | Algorithm            | Implementation                                                       |
+|--------:|-----:|----------------------|----------------------------------------------------------------------|
+|       1 |    9 | Binary Search        | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)             |
+|       2 |   38 | Selection Sort       | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)             |
+|       3 |   44 | Recursion            | [IEnumerableExtensions.cs](IEnumerableExtensions.cs)                 |
+|       5 |  116 | Breadth-First Search | [IReadOnlyDictionaryExtensions.cs](IReadOnlyDictionaryExtensions.cs) |
 
 Wherever practical the example code preserves the identifiers and structure used in the book to make comparison easier.
 
@@ -35,12 +36,13 @@ There are no runnable demos in this project; the source files are small algorith
 
 Small helper files included to keep examples concise and readable.
 
-| Helper | Purpose |
-|-------|--------|
+| Helper                                               | Purpose                                                                                          |
+|------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | [IComparableExtensions.cs](IComparableExtensions.cs) | Enables comparison operator syntax for types implementing `IComparable<T>` used in the examples. |
-| [IEquatableExtensions.cs](IEquatableExtensions.cs) | Enables equality operator syntax for types implementing `IEquatable<T>`. |
-| [IListExtensions.cs](IListExtensions.cs) | Adds a `Pop` extension used by the selection sort example. |
-| [Range.cs](Range.cs) | Provides a small enumerable `Range` helper with an exclusive upper bound. |
+| [IEquatableExtensions.cs](IEquatableExtensions.cs)   | Enables equality operator syntax for types implementing `IEquatable<T>`.                         |
+| [IListExtensions.cs](IListExtensions.cs)             | Adds a `Pop` extension used by the selection sort example.                                       |
+| [Range.cs](Range.cs)                                 | Provides a small enumerable `Range` helper with an exclusive upper bound.                        |
+| [QueueExtensions](QueueExtensions.cs)                | Add ability to easily enqueue multiple items at the same time using operator syntax              |
 
 ## Contributing
 
