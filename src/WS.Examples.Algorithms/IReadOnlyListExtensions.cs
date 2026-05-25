@@ -5,6 +5,8 @@ namespace WS.Examples.Algorithms;
 /// </summary>
 public static class IReadOnlyListExtensions
 {
+    private readonly static Random random = new();
+
     /// <summary>
     /// Performs a binary search on a sorted <seealso cref="IReadOnlyList{T}"/> to find the index of a specified item.
     /// The method returns an  <seealso cref="Option{T}"/> containing the index of the item if found, or <seealso cref="Option{T}.None"/> if 
@@ -80,5 +82,34 @@ public static class IReadOnlyListExtensions
         }
 
         return newArr;
+    }
+
+    /// <summary>
+    /// Sorts the elements of an <see cref="IReadOnlyList{T}"/> using the quicksort algorithm
+    /// and returns a new list containing the sorted elements. The original sequence is left
+    /// unchanged. A randomized pivot is chosen to reduce the likelihood of worst-case
+    /// performance on already-sorted or nearly-sorted inputs.
+    /// </summary>
+    /// <typeparam name="T">The type of elements in the list.</typeparam>
+    /// <param name="arr">The list to sort.</param>
+    /// <returns>A new <see cref="IReadOnlyList{T}"/> containing the sorted elements.</returns>
+    public static IReadOnlyList<T> QuickSort<T>(this IReadOnlyList<T> arr) where T : IComparable<T>
+    {
+        if (arr.Count <= 1)
+        {
+            return arr;
+        }
+        if (arr.Count == 2)
+        {
+            return arr[0] <= arr[1] ? arr : [arr[1], arr[0]];
+        }
+
+        // Use a random pivot to avoid worst-case performance on already sorted or nearly sorted lists.
+        var pivot = arr[random.Next(arr.Count)];
+
+        var less = arr.Where(x => x <= pivot).ToList();
+        var greater = arr.Where(x => x > pivot).ToList();
+
+        return [..less.QuickSort(), pivot, ..greater.QuickSort()];
     }
 }
