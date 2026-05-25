@@ -7,16 +7,26 @@ This project focuses on small, self-contained examples intended for learning and
 
 ## Contents
 
-| Chapter | Page | Algorithm            | Implementation                                                       |
-|--------:|-----:|----------------------|----------------------------------------------------------------------|
-|       1 |    9 | Binary Search        | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)             |
-|       2 |   38 | Selection Sort       | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)             |
-|       3 |   44 | Recursion            | [IEnumerableExtensions.cs](IEnumerableExtensions.cs)                 |
-|       4 |   69 | Quick Sort           | [IEnumerableExtensions.cs](IEnumerableExtensions.cs)                 |
-|       5 |    - | Hash Table           | [HashTable.cs](HashTable.cs)                                         |
-|       6 |  116 | Breadth-First Search | [IReadOnlyDictionaryExtensions.cs](IReadOnlyDictionaryExtensions.cs) |
+| Chapter | Page | Algorithm                             | Implementation                                                       |
+|--------:|-----:|---------------------------------------|----------------------------------------------------------------------|
+|       1 |    9 | Binary Search                         | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)             |
+|       2 |   38 | Selection Sort                        | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)             |
+|       3 |   44 | Recursion                             | [IEnumerableExtensions.cs](IEnumerableExtensions.cs)                 |
+|       4 |   69 | Quick Sort                            | [IReadOnlyListExtensions.cs](IReadOnlyListExtensions.cs)             |
+|       5 |    - | Hash Table                            | [HashTable.cs](HashTable.cs)                                         |
+|       6 |  116 | Breadth-First Search                  | [IReadOnlyDictionaryExtensions.cs](IReadOnlyDictionaryExtensions.cs) |
+|       7 |    - | Tree, Depth-First Search, Binary Tree | [Trees.cs](Trees.cs)                                                 |
 
 Wherever practical the example code preserves the identifiers and structure used in the book to make comparison easier.
+
+## Notes
+
+- `IReadOnlyList<T>` is used instead of arrays or `List<T>` so the algorithms work on both.
+- `IReadOnlyDictionary<T, IEnumerable<T>>` is used to represent a graph. The keys are the nodes and the value for each key represents a traversal from
+  the key to that node.
+- `HashTable<TKey, TValue>` is mutable and represents the implementation from the book. It simply there to demonstrate that implementation. As the book
+  suggests just use `Dictionary<TKey, TValue>` instead. A similar implementation for an immutable version is planned be added to the project
+  at a later date.
 
 ## Getting started
 
